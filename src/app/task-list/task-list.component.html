@@ -1,0 +1,28 @@
+<!-- <p>{{task.id}}</p>
+<p>{{task.title}}</p>
+<p>{{task.description}}</p>
+<p>{{task.dueDate}}</p>
+<ul>
+    <li *ngFor="let task of taskList">
+      <p>{{ task.title }}</p>
+      <p>{{ task.description }}</p>
+      <p>{{ task.completed }}</p>
+    </li>
+</ul> -->
+<table>
+    <thead>
+        <tr>
+            <th>Completed</th>
+            <th>Title</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let task of taskList">
+            <td>{{ task.completed }}</td>
+            <td>{{ task.title }}</td>
+            <td>{{ task.description }}</td>
+        </tr>
+    </tbody>
+</table>
+  

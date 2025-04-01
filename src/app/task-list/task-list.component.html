@@ -15,6 +15,7 @@
             <th>Completed</th>
             <th>Title</th>
             <th>Description</th>
+            <th>Due Date</th>
             <th></th>
         </tr>
     </thead>
@@ -23,6 +24,7 @@
             <td><input type="checkbox" (change)="completeTask(task.id)"/></td>
             <td>{{ task.title }}</td>
             <td>{{ task.description }}</td>
+            <td>{{ task.dueDate}}</td>
             <td> <input type="button" (click)="deleteTask(task.id)" value="Delete" /></td>
         </tr>
     </tbody>

@@ -57,7 +57,7 @@ export class TaskListComponent {
     {
       id: 5,
       title: "Buy Hold the Cone icecream",
-      dueDate: '2025=04-04',
+      dueDate: '2025-04-04',
       description: "Buy Hold the Cone icecream",
       completed: false
     },

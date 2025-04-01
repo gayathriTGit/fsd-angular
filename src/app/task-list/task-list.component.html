@@ -15,14 +15,36 @@
             <th>Completed</th>
             <th>Title</th>
             <th>Description</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let task of taskList">
-            <td>{{ task.completed }}</td>
+        <tr *ngFor="let task of incompleteTaskList()">
+            <td><input type="checkbox" (change)="completeTask(task.id)"/></td>
             <td>{{ task.title }}</td>
             <td>{{ task.description }}</td>
+            <td> <input type="button" (click)="deleteTask(task.id)" value="Delete" /></td>
         </tr>
     </tbody>
-</table>
-  
+</table> <br>
+<form>
+    <label for="title">Title:</label>
+    <input [(ngModel)]="newTask.title" type="text" id="title" name="title" required/>
+    <br><br>
+
+    <label for="description">Description:</label>
+    <input [(ngModel)]="newTask.description" type="text" id="description" name="description" required/>
+    <br><br>
+
+    <label for="completed">Completed:</label>
+    <input [(ngModel)]="newTask.completed"  type="checkbox" id="completed" name="completed" required/>
+    <br><br>
+
+    <label for="date">Date:</label>
+    <input  [(ngModel)]="newTask.dueDate" type="date" id="date" name="date"/>
+    <br><br>
+
+    <button (click)="addTask()" type="submit">Submit</button>
+</form>
+
+
